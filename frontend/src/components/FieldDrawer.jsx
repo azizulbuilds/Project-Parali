@@ -620,8 +620,8 @@ function FieldDrawer({
                       <Ruler size={16} />
                       <span>Straight-line distance</span>
                       <strong>
-                        {logisticsEstimate.nearest_facility?.straight_line_distance_km != null
-                          ? `${logisticsEstimate.nearest_facility.straight_line_distance_km} km`
+                        {logisticsEstimate.straight_line_distance_km != null
+                          ? `${logisticsEstimate.straight_line_distance_km} km`
                           : "N/A"}
                       </strong>
                     </div>
@@ -630,8 +630,8 @@ function FieldDrawer({
                       <Ruler size={16} />
                       <span>Estimated road distance</span>
                       <strong>
-                        {logisticsEstimate.transport?.estimated_road_distance_km != null
-                          ? `${logisticsEstimate.transport.estimated_road_distance_km} km`
+                        {logisticsEstimate.estimated_road_distance_km != null
+                          ? `${logisticsEstimate.estimated_road_distance_km} km`
                           : "N/A"}
                       </strong>
                     </div>
@@ -640,9 +640,10 @@ function FieldDrawer({
                       <Package size={16} />
                       <span>Transport cost</span>
                       <strong>
-                        {logisticsEstimate.transport?.estimated_transport_cost_inr != null
+                        {logisticsEstimate.estimated_transport_cost_inr != null
                           ? `₹${Number(
-                              logisticsEstimate.transport.estimated_transport_cost_inr
+                              logisticsEstimate
+                                .estimated_transport_cost_inr
                             ).toFixed(0)}`
                           : "N/A"}
                       </strong>
@@ -664,9 +665,9 @@ function FieldDrawer({
                     <div className="transition-drawer-row">
                       <span>Cost per tonne</span>
                       <strong>
-                        {logisticsEstimate.transport?.estimated_cost_per_tonne_inr != null
+                        {logisticsEstimate.cost_per_tonne_inr != null
                           ? `₹${Number(
-                              logisticsEstimate.transport.estimated_cost_per_tonne_inr
+                              logisticsEstimate.cost_per_tonne_inr
                             ).toFixed(0)}/t`
                           : "N/A"}
                       </strong>
@@ -675,14 +676,14 @@ function FieldDrawer({
                     <div className="transition-drawer-row">
                       <span>Search radius</span>
                       <strong>
-                        {logisticsEstimate.facility_matching?.search_radius_km != null
-                          ? `${logisticsEstimate.facility_matching.search_radius_km} km`
+                        {logisticsEstimate.search_radius_km != null
+                          ? `${logisticsEstimate.search_radius_km} km`
                           : "N/A"}
                       </strong>
                     </div>
 
                     <p>
-                      {logisticsEstimate.methodology ||
+                      {logisticsEstimate.methodology_note ||
                         "Logistics values are screening estimates."}
                     </p>
 
