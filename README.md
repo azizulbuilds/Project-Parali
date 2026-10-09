@@ -3,6 +3,10 @@
 ## Satellite AI for Crop-Residue Detection, Crop-Transition Intelligence & Biomass Recovery
 
 <p align="center">
+  <a href="https://project-parali-1.onrender.com"><strong>🚀 View Live Project Parali Application</strong></a>
+</p>
+
+<p align="center">
 
 **Satellite Intelligence → Field Intelligence → Biomass Intelligence → Operational Planning**
 
