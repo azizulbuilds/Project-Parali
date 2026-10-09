@@ -2975,10 +2975,10 @@ The live CNN output remains explicitly cross-domain evidence until a Sentinel-2-
 
 ---
 
-# 📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
-See the [LICENSE] file for details.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
